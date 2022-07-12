@@ -99,7 +99,7 @@ public final class PhotoEditorViewController: UIViewController {
         NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillChangeFrame(_:)),
                                                name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
-        
+        topToolbar.bounds = topToolbar.frame.insetBy(dx: 0, dy: -20.0);
         configureCollectionView()
         stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
         hideControls()
